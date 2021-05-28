@@ -1,0 +1,128 @@
+:root {
+  --white-transparent: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 15px;
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--light-gray);
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20% 20%;
+  height: fit-content;
+}
+
+.card {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-orange {
+  background-color: hsl(31, 77%, 52%);
+}
+
+.card-blue {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.card-green {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.card__content {
+}
+
+.card__logo {
+}
+
+.card__header {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+
+.card__description {
+  color: var(--white-transparent);
+  line-height: 1.6rem;
+}
+
+.card__button,
+.card__button:link,
+.card__button:visited {
+  text-decoration: none;
+  background-color: var(--light-gray);
+  border: 3px solid var(--light-gray);
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.75rem 2rem;
+  text-align: center;
+  align-self: flex-start;
+  margin-top: 3rem;
+}
+
+.card__button:hover {
+  background-color: transparent;
+  color: var(--light-gray);
+}
+
+.card__button--orange {
+  color: hsl(31, 77%, 52%);
+}
+
+.card__button--blue {
+  color: hsl(184, 100%, 22%);
+}
+
+.card__button--green {
+  color: hsl(179, 100%, 13%);
+}
+
+@media only screen and (max-width: 50em) {
+  .container {
+    height: auto;
+    width: auto;
+  }
+  .card-container {
+    flex-direction: column;
+  }
+  .card__button,
+  .card__button:link,
+  .card__button:visited {
+    margin-top: 1.5rem;
+  }
+  .card {
+    padding: 10%;
+  }
+}
